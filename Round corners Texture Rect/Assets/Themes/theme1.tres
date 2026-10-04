@@ -1,0 +1,12 @@
+[gd_resource type="Theme" format=3 uid="uid://c3c2f2rvolnsa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_auqes"]
+bg_color = Color(0.7830422, 0.27564085, 0.0045575006, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+shadow_size = 7
+
+[resource]
+Panel/styles/panel = SubResource("StyleBoxFlat_auqes")

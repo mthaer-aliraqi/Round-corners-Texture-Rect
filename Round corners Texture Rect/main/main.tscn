@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://dr6pm1rcm5uqc"]
+
+[ext_resource type="Theme" uid="uid://c3c2f2rvolnsa" path="res://Assets/Themes/theme1.tres" id="1_pjrb6"]
+[ext_resource type="Texture2D" uid="uid://bm37ptsywjb51" path="res://Assets/bg/roundedimage_1.png" id="2_xwkvk"]
+[ext_resource type="Script" uid="uid://b2262f437khe1" path="res://main/texture_rect_corner.gd" id="3_xwkvk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xwkvk"]
+bg_color = Color(0.78431374, 0.27450982, 0.003921569, 1)
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+shadow_size = 4
+
+[sub_resource type="Theme" id="Theme_c651c"]
+Panel/styles/panel = SubResource("StyleBoxFlat_xwkvk")
+
+[sub_resource type="LabelSettings" id="LabelSettings_53q0u"]
+font_size = 25
+
+[node name="Main" type="Control" unique_id=417901763]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_pjrb6")
+metadata/_edit_vertical_guides_ = [480.0, 0.0]
+metadata/_edit_horizontal_guides_ = [856.0, 0.0]
+
+[node name="Bg" type="ColorRect" parent="." unique_id=659570483]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9, 0.9, 0.9, 1)
+
+[node name="Panel" type="Panel" parent="." unique_id=1945909992]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 72.0
+grow_horizontal = 2
+theme = SubResource("Theme_c651c")
+theme_type_variation = &"444"
+metadata/_edit_group_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=336062454]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 72.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 16
+
+[node name="Label" type="Label" parent="Panel/MarginContainer" unique_id=621071513]
+layout_mode = 2
+text = "GC chemistry lab"
+label_settings = SubResource("LabelSettings_53q0u")
+
+[node name="Panel2" type="Panel" parent="." unique_id=915881505]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -306.5
+offset_right = 199.0
+offset_bottom = -58.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel2" unique_id=1264660792]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Panel2/MarginContainer" unique_id=943084102]
+layout_mode = 2
+texture = ExtResource("2_xwkvk")
+expand_mode = 2
+stretch_mode = 6
+script = ExtResource("3_xwkvk")
+rightTop = 500
+leftTop = 500
+leftBottom = 500
+rightBottom = 500
